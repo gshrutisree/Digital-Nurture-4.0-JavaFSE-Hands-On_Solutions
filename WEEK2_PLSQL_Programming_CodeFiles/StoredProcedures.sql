@@ -1,11 +1,4 @@
-begin
-  execute immediate 'drop table SavingsAccounts';
-  execute immediate 'drop table Employees';
-  execute immediate 'drop table Accounts';
-exception
-  when others then null;
-end;
-/
+
 create table savingsaccounts (accno number primary key,holdername varchar2(50),balance number);
 insert into savingsaccounts values (1001, 'Amit', 10000);
 insert into savingsaccounts values (1002, 'Priya', 15000);
