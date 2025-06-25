@@ -1,6 +1,3 @@
-begin execute immediate 'drop table transactions'; execute immediate 'drop table loans'; execute immediate 'drop table accounts'; execute immediate 'drop table employees'; execute immediate 'drop table customers'; exception when others then null; end;
-/
-
 create table customers (customerid number primary key, name varchar2(100), dob date, balance number, lastmodified date);
 create table accounts (accountid number primary key, customerid number, accounttype varchar2(20), balance number, lastmodified date, foreign key (customerid) references customers(customerid));
 create table transactions (transactionid number primary key, accountid number, transactiondate date, amount number, transactiontype varchar2(10), foreign key (accountid) references accounts(accountid));
