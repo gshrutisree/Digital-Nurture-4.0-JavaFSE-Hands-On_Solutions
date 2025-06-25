@@ -1,5 +1,3 @@
-begin execute immediate 'drop table accounts'; execute immediate 'drop table employees'; execute immediate 'drop table customers'; exception when others then null; end;
-/
 create table customers (customerid number primary key, name varchar2(100), dob date, balance number, lastmodified date);
 create table accounts (accountid number primary key, customerid number, accounttype varchar2(20), balance number, lastmodified date, foreign key (customerid) references customers(customerid));
 create table employees (employeeid number primary key, name varchar2(100), position varchar2(50), salary number, department varchar2(50), hiredate date);
