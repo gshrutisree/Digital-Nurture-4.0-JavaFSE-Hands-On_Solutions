@@ -10,22 +10,14 @@ import org.junit.Test;
 public class AssertionsTest {
 
     @Test
-    public void testAssertions() {
-        // assertEquals
+    public void testAssertions() 
+    {
         assertEquals("Sum should be 5", 5, 2 + 3);
-
-        // assertTrue
         assertTrue("5 should be greater than 3", 5 > 3);
-
-        // assertFalse
         assertFalse("3 should not be greater than 5", 3 > 5);
-
-        // assertNull
-        String nullStr = null;
-        assertNull("Should be null", nullStr);
-
-        // assertNotNull
-        String notNullStr = "JUnit";
-        assertNotNull("Should not be null", notNullStr);
+        String ns = null;
+        assertNull("Should be null", ns);
+        String nns = "JUnit";
+        assertNotNull("Should not be null", nns);
     }
 }
