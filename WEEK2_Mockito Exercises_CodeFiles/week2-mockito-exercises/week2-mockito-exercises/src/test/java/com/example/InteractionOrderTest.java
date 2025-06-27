@@ -13,21 +13,15 @@ public class InteractionOrderTest {
         void stepTwo();
         void stepThree();
     }
-
     @Test
     public void testMethodCallOrder() {
-        // Step 1: Create mock object
-        Service mockService = mock(Service.class);
-
-        // Step 2: Call methods in specific order
-        mockService.stepOne();
-        mockService.stepTwo();
-        mockService.stepThree();
-
-        // Step 3: Verify the order of interaction
-        InOrder inOrder = inOrder(mockService);
-        inOrder.verify(mockService).stepOne();
-        inOrder.verify(mockService).stepTwo();
-        inOrder.verify(mockService).stepThree();
+        Service ms = mock(Service.class);
+        ms.stepOne();
+        ms.stepTwo();
+        ms.stepThree();
+        InOrder io = inOrder(ms);
+        io.verify(ms).stepOne();
+        io.verify(ms).stepTwo();
+        io.verify(ms).stepThree();
     }
 }
