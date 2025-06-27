@@ -14,21 +14,11 @@ public class MultipleReturnsTest {
 
     @Test
     public void testMultipleReturnValues() {
-        // Step 1: Create mock object
-        DataProvider mockProvider = mock(DataProvider.class);
-
-        // Step 2: Stub the method to return different values on consecutive calls
-        when(mockProvider.fetch())
-                .thenReturn("First Call")
-                .thenReturn("Second Call")
-                .thenReturn("Third Call");
-
-        // Step 3: Call the method multiple times
-        System.out.println(mockProvider.fetch()); // First Call
-        System.out.println(mockProvider.fetch()); // Second Call
-        System.out.println(mockProvider.fetch()); // Third Call
-
-        // Optional: You can also verify it was called 3 times
-        verify(mockProvider, times(3)).fetch();
+        DataProvider mp = mock(DataProvider.class);
+        when(mockProvider.fetch()).thenReturn("First Call") .thenReturn("Second Call") .thenReturn("Third Call");
+        System.out.println(mp.fetch()); 
+        System.out.println(mp.fetch());
+        System.out.println(mp.fetch()); 
+        verify(mp, times(3)).fetch();
     }
 }
