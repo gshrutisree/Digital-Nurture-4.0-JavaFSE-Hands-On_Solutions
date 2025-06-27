@@ -13,13 +13,8 @@ public class ArgumentMatchingTest {
 
     @Test
     public void testAddMethodWithArguments() {
-        // Step 1: Create mock object
-        Calculator mockCalculator = mock(Calculator.class);
-
-        // Step 2: Call method with specific arguments
-        mockCalculator.add(5, 10);
-
-        // Step 3: Verify interaction using argument matchers
-        verify(mockCalculator).add(eq(5), eq(10));
+        Calculator mcal = mock(Calculator.class);
+        mcal.add(5, 10);
+        verify(mcal).add(eq(5), eq(10));
     }
 }
