@@ -13,6 +13,6 @@ public class MyService {
     }
 
     public void resetApi() {
-        api.reset(); // <-- This line is essential
+        api.reset(); 
     }
 }
