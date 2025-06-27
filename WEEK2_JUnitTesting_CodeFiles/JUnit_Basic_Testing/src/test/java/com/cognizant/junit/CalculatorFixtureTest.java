@@ -1,6 +1,6 @@
 package com.cognizant.junit;
 
-import org.junit.After;
+import org.junit.After; 
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
