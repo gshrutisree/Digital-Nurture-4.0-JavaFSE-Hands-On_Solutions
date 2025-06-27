@@ -11,19 +11,14 @@ public class VoidMethodExceptionTest {
 
     @Test
     public void testVoidMethodThrowsException() {
-        ExternalApi mockApi = mock(ExternalApi.class);
+        ExternalApi mapi = mock(ExternalApi.class);
+        doThrow(new RuntimeException("API failure")).when(mapi).reset();
 
-        // Stub the void method to throw an exception
-        doThrow(new RuntimeException("API failure")).when(mockApi).reset();
-
-        MyService service = new MyService(mockApi);
-
-        // Optional: Catch the exception to verify behavior
-        Exception exception = assertThrows(RuntimeException.class, () -> {
-            service.resetApi(); // Assuming MyService calls mockApi.reset()
+        MyService s = new MyService(mapi);
+        Exception e = assertThrows(RuntimeException.class, () -> {
+            s.resetApi(); 
         });
-
-        assertEquals("API failure", exception.getMessage());
-        verify(mockApi).reset();
+        assertEquals("API failure", e.getMessage());
+        verify(mapi).reset();
     }
 }
