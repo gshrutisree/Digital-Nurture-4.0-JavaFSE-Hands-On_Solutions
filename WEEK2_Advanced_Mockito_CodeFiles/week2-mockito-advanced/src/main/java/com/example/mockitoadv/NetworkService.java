@@ -8,7 +8,7 @@ public class NetworkService {
     }
 
     public String connectToServer() {
-        String connection = networkClient.connect();
+        String connection = networkClient.connect(); 
         return "Connected to " + connection;
     }
 }
