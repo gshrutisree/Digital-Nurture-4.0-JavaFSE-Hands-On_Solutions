@@ -6,7 +6,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class ServiceTest {
-
+ 
     @Test
     public void testServiceWithMockRepository() {
         Repository mr = mock(Repository.class);
