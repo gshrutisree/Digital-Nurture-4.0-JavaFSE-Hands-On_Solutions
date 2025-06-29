@@ -1,28 +1,27 @@
 package com.example.junit;
-
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
-public class ExceptionThrowerTest {
-
-    ExceptionThrower thrower = new ExceptionThrower();
-
+public class ExceptionThrowerTest 
+{
+    ExceptionThrower t = new ExceptionThrower();
     @Test
     void testExceptionThrown() {
         System.out.println("Running testExceptionThrown");
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            thrower.throwException(null);
+        Exception e = assertThrows(IllegalArgumentException.class, () -> {
+            t.throwException(null);
         });
-        assertEquals("Input cannot be null", exception.getMessage());
+        assertEquals("Input cannot be null", e.getMessage());
     }
 
     @Test
-    void testNoException() {
+    void testNoException() 
+    {
         System.out.println("Running testNoException");
         assertDoesNotThrow(() -> {
-            thrower.throwException("valid input");
+            t.throwException("valid input");
         });
     }
 }
