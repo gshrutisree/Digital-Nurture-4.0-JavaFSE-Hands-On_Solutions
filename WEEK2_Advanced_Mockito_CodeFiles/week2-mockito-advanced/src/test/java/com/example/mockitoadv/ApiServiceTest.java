@@ -7,7 +7,7 @@ import static org.mockito.Mockito.when;
 
 public class ApiServiceTest {
 
-    @Test
+    @Test 
     public void testServiceWithMockRestClient() {
         RestClient mrc = mock(RestClient.class);
 
