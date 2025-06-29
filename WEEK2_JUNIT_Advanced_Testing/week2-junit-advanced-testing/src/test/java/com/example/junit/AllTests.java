@@ -1,4 +1,3 @@
-// AllTests.java
 package com.example.junit;
 
 import org.junit.platform.suite.api.SelectClasses;
