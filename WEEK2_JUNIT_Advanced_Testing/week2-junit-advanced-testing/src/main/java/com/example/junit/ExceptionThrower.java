@@ -6,6 +6,5 @@ public class ExceptionThrower {
         if (input == null) {
             throw new IllegalArgumentException("Input cannot be null");
         }
-        // Continue with logic (optional)
     }
 }
