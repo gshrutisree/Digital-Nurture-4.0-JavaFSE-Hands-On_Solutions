@@ -8,7 +8,7 @@ public class Service {
     }
 
     public String processData() {
-        String data = repository.getData();
+        String data = repository.getData(); 
         return "Processed " + data;
     }
 }
