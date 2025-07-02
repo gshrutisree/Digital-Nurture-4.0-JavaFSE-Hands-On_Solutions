@@ -1,0 +1,4 @@
+com/example/ex9/repository/BookRepository.class
+com/example/ex9/controller/BookController.class
+com/example/ex9/entity/Book.class
+com/example/ex9/LibraryManagementApplication.class
