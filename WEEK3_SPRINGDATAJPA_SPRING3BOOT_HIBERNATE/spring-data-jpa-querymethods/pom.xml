@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.cognizant</groupId>
+    <groupId>com.cognizant</groupId> 
     <artifactId>spring-data-jpa-querymethods</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-data-jpa-querymethods</name>
