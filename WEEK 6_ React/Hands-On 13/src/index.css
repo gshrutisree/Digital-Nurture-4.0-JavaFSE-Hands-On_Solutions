@@ -1,0 +1,25 @@
+/* src/index.css */
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 30%;
+  padding: 20px;
+}
+
+.green-border {
+  border-left: 3px solid green;
+  border-right: 3px solid green;
+}
+
+h2 {
+  font-weight: bold;
+}
